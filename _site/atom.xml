@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-23T23:52:43+08:00</updated><id>http://localhost:4000/</id><title type="html">Wh1te</title><author><name>Wh1te</name></author><entry><title type="html">Java 日志框架 Logback</title><link href="http://localhost:4000/java/2018/08/22/Java-%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-Logback/" rel="alternate" type="text/html" title="Java 日志框架 Logback" /><published>2018-08-22T00:00:00+08:00</published><updated>2018-08-22T00:00:00+08:00</updated><id>http://localhost:4000/java/2018/08/22/Java%20%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6%20Logback</id><content type="html" xml:base="http://localhost:4000/java/2018/08/22/Java-%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-Logback/">&lt;h2 id=&quot;logback-简介&quot;&gt;Logback 简介&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-25T09:12:30+08:00</updated><id>http://localhost:4000/</id><title type="html">Wh1te</title><author><name>Wh1te</name></author><entry><title type="html">Java 日志框架 Logback</title><link href="http://localhost:4000/java/2018/08/22/Java-%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-Logback/" rel="alternate" type="text/html" title="Java 日志框架 Logback" /><published>2018-08-22T00:00:00+08:00</published><updated>2018-08-22T00:00:00+08:00</updated><id>http://localhost:4000/java/2018/08/22/Java%20%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6%20Logback</id><content type="html" xml:base="http://localhost:4000/java/2018/08/22/Java-%E6%97%A5%E5%BF%97%E6%A1%86%E6%9E%B6-Logback/">&lt;h2 id=&quot;logback-简介&quot;&gt;Logback 简介&lt;/h2&gt;
 &lt;p&gt;Logback 是一个稳定、高效、快速的 Java 日志框架，作为 log4j 的改良版，它与 log4j 相比拥有更多特性，也带来了很大的性能提升，具体改进可以查看&lt;a href=&quot;https://logback.qos.ch/reasonsToSwitch.html&quot;&gt;官方文档&lt;/a&gt;。&lt;/p&gt;
 
 &lt;!-- more --&gt;
@@ -409,7 +409,7 @@ LOG_PATH=logs
     &lt;/ul&gt;
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # rewrite模块需要 PCRE(Perl Compatible Regular Expressions),pcre-devel 库
- yum install -y pcre pcre-devel 
+ yum install -y pcre pcre-devel
  # gzip模块需要 zlib 库
  yum install -y zlib
  # ssl 功能需要 OpenSSL 库
@@ -426,7 +426,7 @@ LOG_PATH=logs
  # 使用 wget 命令下载
  wget -c https://nginx.org/download/nginx-1.12.2.tar.gz
  # 解压文件
- tar -zxvf nginx-1.12.2.tar.gz 
+ tar -zxvf nginx-1.12.2.tar.gz
  # 进入解压后的目录
  cd nginx-1.12.2
  # 使用默认配置
@@ -481,12 +481,12 @@ LOG_PATH=logs
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Welcome to nginx!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;If you see this page, the nginx web server is successfully installed and
  working. Further configuration is required.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    
+
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;For online documentation and support please refer to
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://nginx.org/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;nginx.org&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;.&lt;span class=&quot;nt&quot;&gt;&amp;lt;br/&amp;gt;&lt;/span&gt;
  Commercial support is available at
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://nginx.com/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;nginx.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-    
+
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&amp;lt;em&amp;gt;&lt;/span&gt;Thank you for using nginx.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
@@ -650,14 +650,17 @@ cp -R tomcat-home tomcat-9090
   &lt;li&gt;
     &lt;p&gt;编写脚本&lt;/p&gt;
 
-    &lt;p&gt;前面的准备工作做完之后就可以启动 tomcat 了，但是现在只有 tomcat-home/bin 目录下有 startup.sh 和 shutdown.sh，而我们要启动的 8080 和 9090 两个实例，因此我们就需要编写一段脚本，修改 CATALINA_BASE 来达到分别操作两个实例的目的。
-       - 启动脚本 start.sh：&lt;/p&gt;
+    &lt;p&gt;前面的准备工作做完之后就可以启动 tomcat 了，但是现在只有 tomcat-home/bin 目录下有 startup.sh 和 shutdown.sh，而我们要启动的 8080 和 9090 两个实例，因此我们就需要编写一段脚本，修改 CATALINA_BASE 来达到分别操作两个实例的目的。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;启动脚本 start.sh：&lt;/li&gt;
+    &lt;/ul&gt;
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
  &lt;span class=&quot;nv&quot;&gt;CUR_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dirname &lt;span class=&quot;nv&quot;&gt;$BASH_SOURCE&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_BASE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;readlink -f &lt;span class=&quot;nv&quot;&gt;$CUR_DIR&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/tomcat-home&quot;&lt;/span&gt;
-    
+
  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/startup.sh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
          &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/startup.sh
  &lt;span class=&quot;k&quot;&gt;else
@@ -666,55 +669,50 @@ cp -R tomcat-home tomcat-9090
 
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;停止脚本 stop.sh：&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;停止脚本 stop.sh：&lt;/li&gt;
+    &lt;/ul&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
-  &lt;span class=&quot;nv&quot;&gt;CUR_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dirname &lt;span class=&quot;nv&quot;&gt;$BASH_SOURCE&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_BASE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;readlink -f &lt;span class=&quot;nv&quot;&gt;$CUR_DIR&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/tomcat-home&quot;&lt;/span&gt;
-    
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/shutdown.sh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-          &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/shutdown.sh
-  &lt;span class=&quot;k&quot;&gt;else
-          &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bin/shutdown.sh not exist&quot;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+ &lt;span class=&quot;nv&quot;&gt;CUR_DIR&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;dirname &lt;span class=&quot;nv&quot;&gt;$BASH_SOURCE&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_BASE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;readlink -f &lt;span class=&quot;nv&quot;&gt;$CUR_DIR&lt;/span&gt;&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CATALINA_HOME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/tomcat-home&quot;&lt;/span&gt;
+
+ &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -f &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/shutdown.sh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+         &lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;/bin/shutdown.sh
+ &lt;span class=&quot;k&quot;&gt;else
+         &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$CATALINA_HOME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/bin/shutdown.sh not exist&quot;&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
 
     &lt;p&gt;将这两个脚本文件放在 tomcat-8080 和 tomcat-9090 的根目录下即可&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [root@localhost tomcat-8080]# ls
-  conf     logs    RELEASE-NOTES  start.sh  temp     work
-  LICENSE  NOTICE  RUNNING.txt    stop.sh   webapps
-    
-  # 启动 8080 端口的 tomcat
-  [root@localhost tomcat-8080]# ./start.sh 
-  Using CATALINA_BASE:   /usr/local/tomcat-8080
-  Using CATALINA_HOME:   /usr/local/tomcat-home
-  Using CATALINA_TMPDIR: /usr/local/tomcat-8080/temp
-  Using JRE_HOME:        /usr/local/jdk1.8.0_161
-  Using CLASSPATH:       /usr/local/tomcat-home/bin/bootstrap.jar:/usr/local/tomcat-home/bin/tomcat-juli.jar
-  Tomcat started.
-  # 停止
-  [root@localhost tomcat-8080]# ./stop.sh 
-  Using CATALINA_BASE:   /usr/local/tomcat-8080
-  Using CATALINA_HOME:   /usr/local/tomcat-home
-  Using CATALINA_TMPDIR: /usr/local/tomcat-8080/temp
-  Using JRE_HOME:        /usr/local/jdk1.8.0_161
-  Using CLASSPATH:       /usr/local/tomcat-home/bin/bootstrap.jar:/usr/local/tomcat-home/bin/tomcat-juli.jar
-    
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; [root@localhost tomcat-8080]# ls
+ conf     logs    RELEASE-NOTES  start.sh  temp     work
+ LICENSE  NOTICE  RUNNING.txt    stop.sh   webapps
+
+ # 启动 8080 端口的 tomcat
+ [root@localhost tomcat-8080]# ./start.sh
+ Using CATALINA_BASE:   /usr/local/tomcat-8080
+ Using CATALINA_HOME:   /usr/local/tomcat-home
+ Using CATALINA_TMPDIR: /usr/local/tomcat-8080/temp
+ Using JRE_HOME:        /usr/local/jdk1.8.0_161
+ Using CLASSPATH:       /usr/local/tomcat-home/bin/bootstrap.jar:/usr/local/tomcat-home/bin/tomcat-juli.jar
+ Tomcat started.
+ # 停止
+ [root@localhost tomcat-8080]# ./stop.sh
+ Using CATALINA_BASE:   /usr/local/tomcat-8080
+ Using CATALINA_HOME:   /usr/local/tomcat-home
+ Using CATALINA_TMPDIR: /usr/local/tomcat-8080/temp
+ Using JRE_HOME:        /usr/local/jdk1.8.0_161
+ Using CLASSPATH:       /usr/local/tomcat-home/bin/bootstrap.jar:/usr/local/tomcat-home/bin/tomcat-juli.jar
+
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;测试两个 Tomcat 是否同时正常运行&lt;/p&gt;
 
@@ -826,7 +824,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
     &lt;p&gt;每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决 session 的问题。&lt;/p&gt;
 
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;s&quot;&gt;upstream localhost {&lt;/span&gt;
-     &lt;span class=&quot;s&quot;&gt;ip_hash;&lt;/span&gt; 
+     &lt;span class=&quot;s&quot;&gt;ip_hash;&lt;/span&gt;
      &lt;span class=&quot;s&quot;&gt;server 127.0.0.1:8080;&lt;/span&gt;
      &lt;span class=&quot;s&quot;&gt;server 127.0.0.1:9090;&lt;/span&gt;
  &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
@@ -839,7 +837,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
     &lt;p&gt;将请求分配给当前连接数最少的服务器&lt;/p&gt;
 
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;s&quot;&gt;upstream localhost {&lt;/span&gt;
-     &lt;span class=&quot;s&quot;&gt;least_conn;&lt;/span&gt; 
+     &lt;span class=&quot;s&quot;&gt;least_conn;&lt;/span&gt;
      &lt;span class=&quot;s&quot;&gt;server 127.0.0.1:8080;&lt;/span&gt;
      &lt;span class=&quot;s&quot;&gt;server 127.0.0.1:9090;&lt;/span&gt;
  &lt;span class=&quot;s&quot;&gt;}&lt;/span&gt;
