@@ -17,13 +17,13 @@ tags: Nginx Tomcat
 
     - Nginx 是使用 C 语言开发的，编译依赖 gcc 环境，因此如果没有 gcc 需要先安装：
 
-    ```
+    ``` bash  
     yum install -y gcc-c++
     ```
 
     - 安装 Nginx 依赖库  
 
-    ```
+    ``` bash  
     # rewrite模块需要 PCRE(Perl Compatible Regular Expressions),pcre-devel 库
     yum install -y pcre pcre-devel
     # gzip模块需要 zlib 库
@@ -35,7 +35,7 @@ tags: Nginx Tomcat
 2. 下载 Ngnix
 
     从 [Ngnix 官网](http://nginx.org/en/download.html)下载最新稳定版，目前是 [1.12.2](http://nginx.org/download/nginx-1.12.2.tar.gz)
-    ```
+    ``` bash  
     # 如果还未安装 wget 请先执行安装命令
     yum install -y wget
     # 使用 wget 命令下载
@@ -50,7 +50,7 @@ tags: Nginx Tomcat
 3. 编译安装 Nginx
 
     编译安装十分简单，只需执行两个命令即可
-    ```
+    ``` bash  
     # 编译
     make
     # 安装
@@ -63,7 +63,7 @@ tags: Nginx Tomcat
 4. 启动测试
 
     Ngnix 安装完成后即可启动测试是否可以正常运行
-    ```
+    ``` bash  
     # 进入 ngnix 执行文件目录
     cd /usr/local/ngnix/sbin
     # 启动
@@ -108,7 +108,7 @@ tags: Nginx Tomcat
 Tomcat 单实例部署，即一个 Tomcat 服务器运行时，不存在负载均衡一说，因此，我们首先要做的就是实现 Tomcat 多实例部署，将我们的同一个应用程序部署在多个 Tomcat 服务器上同时运行。主要步骤如下：
 
 1. 安装 JDK（如果本机已经安装了则跳过第一步）
-```
+``` bash  
 # 下载、解压 JDK8，下载地址可以从官网获取
 wget http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/jdk-8u161-linux-x64.tar.gz?AuthParam=1520068673_6f545cf32470b83658219011266e65b8
 # 配置 Java 环境变量
@@ -126,7 +126,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 ```
 2. 下载 Tomcat
-```
+``` bash  
 # 下载 Tomcat 9
 wget http://mirrors.hust.edu.cn/apache/tomcat/tomcat-9/v9.0.5/bin/apache-tomcat-9.0.5.tar.gz
 # 解压
@@ -174,7 +174,7 @@ cp -R tomcat-home tomcat-9090
 
     基于 CATALINA_HOME 和 CATALINA_BASE 分离目录
 
-    ```
+    ``` bash  
     # 根据上面表格整理完目录之后，目录结构如下：
     [root@localhost tomcat-home]# ls
     bin  lib  LICENSE  NOTICE  RELEASE-NOTES  RUNNING.txt
@@ -212,7 +212,7 @@ cp -R tomcat-home tomcat-9090
 
     - 启动脚本 start.sh：
 
-    ```
+    ``` bash  
     #!/bin/sh
     CUR_DIR=`dirname $BASH_SOURCE`
     export CATALINA_BASE=`readlink -f $CUR_DIR`
@@ -228,7 +228,7 @@ cp -R tomcat-home tomcat-9090
 
     - 停止脚本 stop.sh：
 
-    ```
+    ``` bash  
     #!/bin/sh
     CUR_DIR=`dirname $BASH_SOURCE`
     export CATALINA_BASE=`readlink -f $CUR_DIR`
@@ -245,7 +245,7 @@ cp -R tomcat-home tomcat-9090
     将这两个脚本文件放在 tomcat-8080 和 tomcat-9090 的根目录下即可
 
 
-    ```
+    ``` bash  
     [root@localhost tomcat-8080]# ls
     conf     logs    RELEASE-NOTES  start.sh  temp     work
     LICENSE  NOTICE  RUNNING.txt    stop.sh   webapps
@@ -272,7 +272,7 @@ cp -R tomcat-home tomcat-9090
 
     为了方便测试，在 /usr/local/tomcat-8080/webapps/ROOT 和 /usr/local/tomcat-9090/webapps/ROOT 目录下分别新建一个 index.html 文件，内容分别为 "tomcat-8080" 和 "tomcat-9090" 便于我们区分。完成之后使用 start.sh 启动两个实例，这里我们同样使用 curl 访问来测试。
 
-    ```
+    ``` bash  
     # 访问 9090 端口，获取到 9090 的数据
     [root@localhost tomcat-9090]# curl localhost:9090
     <h1> tomcat-9090 </h1>
@@ -286,7 +286,7 @@ cp -R tomcat-home tomcat-9090
 Ngnix 和 Tomcat 结合实现负载均衡的需求大概是这样的：用户访问服务器的 8888 端口，Ngnix 接收到请求之后转发至 8080 端口或者 9090 端口由 Tomcat 处理。两个 Tomcat 部署了同一个应用，这样就可以实现负载均衡，可以由两个 Tomcat 同时处理用户请求。这里我们以 localhost 为例，开始配置 Ngnix
 > 这里使用 localhost 作为示例，正式使用时在配置文件中使用域名替换 localhost 即可
 
-```
+``` bash  
 # 进入 ngnix 配置文件的目录
 # 默认配置文件是 ngnix.conf
 /usr/local/nginx/conf
@@ -332,7 +332,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 
 至此，Nginx + Tomcat 的负责均衡服务器已经搭建完成，现在访问 localhost:8888 就可以看到两个 Tomcat 都能处理来自 8888 端口的请求了
 
-```
+``` bash  
 [root@localhost sbin]# curl localhost:8888
 <h1> tomcat-8080 </h1>
 [root@localhost sbin]# curl localhost:8888
